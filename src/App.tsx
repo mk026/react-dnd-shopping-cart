@@ -1,5 +1,7 @@
+import ProductsPage from "./pages/products-page";
+
 function App() {
-  return <div>React dnd shopping cart</div>;
+  return <ProductsPage />;
 }
 
 export default App;
