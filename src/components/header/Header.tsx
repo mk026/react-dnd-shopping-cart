@@ -1,11 +1,12 @@
 import { FC } from "react";
 
 import CartButton from "./cart-button";
+import AppTitle from "./app-title";
 
 const Header: FC = () => {
   return (
     <div>
-      <h1>React dnd shopping cart</h1>
+      <AppTitle />
       <CartButton />
     </div>
   );
