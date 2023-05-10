@@ -7,7 +7,7 @@ const Cart: FC = () => {
   return (
     <div>
       <p>Cart</p>
-      <CartTotal />
+      <CartTotal total={0} />
       <CartControls />
     </div>
   );

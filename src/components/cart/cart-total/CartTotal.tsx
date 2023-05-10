@@ -1,7 +1,15 @@
 import { FC } from "react";
 
-const CartTotal: FC = () => {
-  return <div>CartTotal</div>;
+interface CartTotalProps {
+  total: number;
+}
+
+const CartTotal: FC<CartTotalProps> = ({ total }) => {
+  return (
+    <div>
+      <p>Total: {total}</p>
+    </div>
+  );
 };
 
 export default CartTotal;
