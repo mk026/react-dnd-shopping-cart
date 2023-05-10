@@ -5,10 +5,10 @@ import AppTitle from "./app-title";
 
 const Header: FC = () => {
   return (
-    <div>
+    <header>
       <AppTitle />
       <CartButton />
-    </div>
+    </header>
   );
 };
 
