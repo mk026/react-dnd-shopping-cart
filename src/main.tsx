@@ -9,15 +9,18 @@ import App from "./App";
 import { queryClient } from "./api/queryClient";
 
 import "./styles/global.css";
+import { StyledEngineProvider } from "@mui/material";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <QueryClientProvider client={queryClient}>
-        <DndProvider backend={HTML5Backend}>
-          <App />
-        </DndProvider>
-      </QueryClientProvider>
-    </BrowserRouter>
+    <StyledEngineProvider injectFirst>
+      <BrowserRouter>
+        <QueryClientProvider client={queryClient}>
+          <DndProvider backend={HTML5Backend}>
+            <App />
+          </DndProvider>
+        </QueryClientProvider>
+      </BrowserRouter>
+    </StyledEngineProvider>
   </React.StrictMode>
 );
