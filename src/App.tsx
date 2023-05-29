@@ -1,12 +1,9 @@
-import Layout from "./components/layout";
-import ProductsPage from "./pages/products-page";
+import { RouterProvider } from "react-router-dom";
 
-function App() {
-  return (
-    <Layout>
-      <ProductsPage />
-    </Layout>
-  );
-}
+import { router } from "./routes";
+
+const App = () => {
+  return <RouterProvider router={router} />;
+};
 
 export default App;
