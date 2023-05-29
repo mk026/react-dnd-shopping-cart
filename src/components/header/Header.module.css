@@ -1,5 +1,7 @@
 .header {
   position: sticky;
+  flex-flow: row wrap;
+  justify-content: space-between;
   padding: 1rem;
   margin-bottom: 2rem;
 }
