@@ -1,7 +1,10 @@
 import { FC } from "react";
+import { Card } from "@mui/material";
 
 import CartControls from "./cart-controls";
 import CartTotal from "./cart-total";
+
+import classes from "./Cart.module.css";
 
 interface CartProps {
   isOpen: boolean;
@@ -9,11 +12,11 @@ interface CartProps {
 
 const Cart: FC<CartProps> = ({ isOpen }) => {
   return isOpen ? (
-    <div>
+    <Card className={classes.cart}>
       <p>Cart</p>
       <CartTotal total={0} />
       <CartControls />
-    </div>
+    </Card>
   ) : null;
 };
 
