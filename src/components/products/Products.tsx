@@ -3,15 +3,17 @@ import { FC } from "react";
 import ProductsList from "./products-list";
 import SearchProductsForm from "./search-products-form";
 import ProductsFilters from "./products-filters/ProductsFilters";
-import { getFakeProducts } from "../../utils/getFakeProducts";
+import { useGetProductsQuery } from "../../hooks/useGetProductsQuery";
 
 const Products: FC = () => {
-  const products = getFakeProducts();
+  const { data, isLoading } = useGetProductsQuery();
+
   return (
     <div>
       <SearchProductsForm />
       <ProductsFilters />
-      <ProductsList products={products} />
+      {isLoading && <p>Loading...</p>}
+      {data && <ProductsList products={data} />}
     </div>
   );
 };
