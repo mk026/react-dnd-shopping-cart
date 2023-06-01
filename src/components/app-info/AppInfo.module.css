@@ -1,0 +1,10 @@
+.container {
+  margin: 0 auto 2rem;
+  padding: 1rem;
+  width: 600px;
+}
+
+.info {
+  font-size: 1rem;
+  text-align: center;
+}
