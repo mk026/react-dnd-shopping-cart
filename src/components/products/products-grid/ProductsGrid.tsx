@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { Grid } from "@mui/material";
 
 import { IProduct } from "../../../types/product";
 import Product from "./product";
@@ -9,11 +10,11 @@ interface ProductsListProps {
 
 const ProductsList: FC<ProductsListProps> = ({ products }) => {
   return (
-    <ul>
+    <Grid container>
       {products.map((product) => (
         <Product key={product.id} product={product} />
       ))}
-    </ul>
+    </Grid>
   );
 };
 
