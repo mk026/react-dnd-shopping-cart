@@ -1,13 +1,13 @@
 import { FC } from "react";
-import { Link } from "react-router-dom";
 
-import { Paths } from "../../routes";
+import AppInfo from "../../components/app-info";
+import ViewProductsButton from "../../components/view-products-button";
 
 const HomePage: FC = () => {
   return (
     <>
-      <div>Welcome to React DnD shopping cart demo app</div>
-      <Link to={Paths.PRODUCTS}>View Products</Link>
+      <AppInfo />
+      <ViewProductsButton />
     </>
   );
 };
