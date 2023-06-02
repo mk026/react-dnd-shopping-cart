@@ -1,13 +1,11 @@
 import { FC } from "react";
+import { Box, TextField } from "@mui/material";
 
 const SearchProductsForm: FC = () => {
   return (
-    <form>
-      <label>
-        Search Products
-        <input type="text" />
-      </label>
-    </form>
+    <Box component="form">
+      <TextField label="Search Products" />
+    </Box>
   );
 };
 
