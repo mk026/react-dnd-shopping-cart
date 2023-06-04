@@ -1,11 +1,6 @@
 import { FC, PropsWithChildren, createContext, useState } from "react";
 
-import { IProduct } from "../types/product";
-
-export interface ICartItem {
-  product: IProduct;
-  amount: number;
-}
+import { ICartItem } from "../types/cart";
 
 export interface ICartContext {
   items: ICartItem[];
