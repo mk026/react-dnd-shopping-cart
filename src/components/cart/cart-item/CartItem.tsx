@@ -1,20 +1,19 @@
 import { FC } from "react";
 import { Button, Card, Typography } from "@mui/material";
 
-import { IProduct } from "../../../types/product";
+import { ICartItem } from "../../../types/cart";
 
 interface CartItemProps {
-  product: IProduct;
-  amount: number;
+  item: ICartItem;
 }
 
-const CartItem: FC<CartItemProps> = ({ product, amount }) => {
+const CartItem: FC<CartItemProps> = ({ item }) => {
   return (
     <Card>
-      <Typography>{product.title}</Typography>
-      <Typography>{product.description}</Typography>
-      <Typography>{product.price}</Typography>
-      <Typography>{amount}</Typography>
+      <Typography>{item.title}</Typography>
+      <Typography>{item.description}</Typography>
+      <Typography>{item.price}</Typography>
+      <Typography>{item.amount}</Typography>
       <Button>Remove</Button>
     </Card>
   );
