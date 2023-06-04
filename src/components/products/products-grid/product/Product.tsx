@@ -13,7 +13,7 @@ interface ProductProps {
 }
 
 const Product: FC<ProductProps> = ({ product }) => {
-  const [, ref] = useProduct(product);
+  const { ref } = useProduct(product);
 
   return (
     <Card ref={ref} className={classes.product}>
