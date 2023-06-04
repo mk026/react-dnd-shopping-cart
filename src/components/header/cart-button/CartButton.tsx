@@ -1,13 +1,13 @@
 import { FC } from "react";
 import { Button } from "@mui/material";
 
+import { useCartContext } from "../../../hooks/useCartContext";
+
 import classes from "./CartButton.module.css";
 
-interface CartButtonProps {
-  toggleCart: () => void;
-}
+const CartButton: FC = () => {
+  const { toggleCart } = useCartContext();
 
-const CartButton: FC<CartButtonProps> = ({ toggleCart }) => {
   return (
     <Button className={classes.button} onClick={toggleCart}>
       Cart

@@ -7,12 +7,8 @@ import { useCart } from "../../hooks/useCart";
 
 import classes from "./Cart.module.css";
 
-interface CartProps {
-  isOpen: boolean;
-}
-
-const Cart: FC<CartProps> = ({ isOpen }) => {
-  const [, ref] = useCart();
+const Cart: FC = () => {
+  const { isOpen, ref } = useCart();
 
   return isOpen ? (
     <Card className={classes.cart} ref={ref}>
