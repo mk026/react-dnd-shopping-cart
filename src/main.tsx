@@ -6,10 +6,10 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { StyledEngineProvider } from "@mui/material";
 
 import App from "./App";
+import CartProvider from "./context/CartContext";
 import { queryClient } from "./api/queryClient";
 
 import "./styles/global.css";
-import CartProvider from "./context/CartContext";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
