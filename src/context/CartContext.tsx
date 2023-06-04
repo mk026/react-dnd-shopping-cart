@@ -11,7 +11,8 @@ export interface ICartContext {
   items: ICartItem[];
   addItem: (item: ICartItem) => void;
   isOpen: boolean;
-  toggle: () => void;
+  openCart: () => void;
+  closeCart: () => void;
 }
 
 export const CartContext = createContext({} as ICartContext);
@@ -21,13 +22,15 @@ const CartProvider: FC<PropsWithChildren> = ({ children }) => {
   const [items, setItems] = useState<ICartItem[]>([]);
 
   const addItem = (item: ICartItem) => setItems((prev) => [...prev, item]);
-  const toggle = () => setIsOpen((prev) => !prev);
+  const openCart = () => setIsOpen(true);
+  const closeCart = () => setIsOpen(false);
 
   const value: ICartContext = {
     isOpen,
     items,
     addItem,
-    toggle,
+    openCart,
+    closeCart,
   };
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
