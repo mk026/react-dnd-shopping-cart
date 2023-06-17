@@ -5,6 +5,7 @@ import { ICartItem } from "../types/cart";
 export interface ICartContext {
   items: ICartItem[];
   addItem: (item: ICartItem) => void;
+  removeItem: (id: number) => void;
   isOpen: boolean;
   openCart: () => void;
   closeCart: () => void;
@@ -18,6 +19,8 @@ const CartProvider: FC<PropsWithChildren> = ({ children }) => {
   const [items, setItems] = useState<ICartItem[]>([]);
 
   const addItem = (item: ICartItem) => setItems((prev) => [...prev, item]);
+  const removeItem = (id: number) =>
+    setItems((prev) => prev.filter((item) => item.id !== id));
   const openCart = () => setIsOpen(true);
   const closeCart = () => setIsOpen(false);
   const toggleCart = () => setIsOpen((prev) => !prev);
@@ -26,6 +29,7 @@ const CartProvider: FC<PropsWithChildren> = ({ children }) => {
     isOpen,
     items,
     addItem,
+    removeItem,
     openCart,
     closeCart,
     toggleCart,
