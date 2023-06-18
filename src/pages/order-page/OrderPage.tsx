@@ -1,7 +1,9 @@
 import { FC } from "react";
 
+import PageTitle from "../../components/page-title";
+
 const OrderPage: FC = () => {
-  return <div>OrderPage</div>;
+  return <PageTitle>OrderPage</PageTitle>;
 };
 
 export default OrderPage;
