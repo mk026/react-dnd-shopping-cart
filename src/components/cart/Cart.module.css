@@ -4,3 +4,7 @@
   top: 80px;
   padding: 1rem;
 }
+
+.hovering {
+  background-color: #9a9a9a;
+}

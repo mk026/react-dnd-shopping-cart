@@ -8,10 +8,16 @@ import { useCart } from "../../hooks/useCart";
 import classes from "./Cart.module.css";
 
 const Cart: FC = () => {
-  const { isOpen, ref } = useCart();
+  const { isOpen, isOver, ref } = useCart();
 
   if (!isOpen) {
     return null;
+  }
+
+  const styles = [classes.cart];
+
+  if (isOver) {
+    styles.push(classes.hovering);
   }
 
   return (
