@@ -6,7 +6,7 @@ import { useCartContext } from "./useCartContext";
 export const useCart = () => {
   const [{ isOver }, ref] = useDrop(() => ({
     accept: PRODUCT_TYPE,
-    collect: (monitor) => ({ isOver: monitor.isOver }),
+    collect: (monitor) => ({ isOver: monitor.isOver() }),
   }));
   const { isOpen } = useCartContext();
 
