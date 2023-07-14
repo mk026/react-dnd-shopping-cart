@@ -20,13 +20,18 @@ const Product: FC<ProductProps> = ({ product }) => {
       <CardContent>
         <Typography
           variant="h4"
+          className={classes.title}
           component={Link}
           to={`${Paths.PRODUCTS}/${product.id}`}
         >
           {product.title}
         </Typography>
-        <Typography variant="body1">{product.description}</Typography>
-        <Typography variant="body2">{product.price}</Typography>
+        <Typography variant="body1" className={classes.description}>
+          {product.description}
+        </Typography>
+        <Typography variant="body2" className={classes.price}>
+          {product.price}
+        </Typography>
       </CardContent>
     </Card>
   );
