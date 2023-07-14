@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { CircularProgress } from "@mui/material";
 
 import ProductsGrid from "./products-grid";
 import SearchProductsForm from "./search-products-form";
@@ -9,12 +10,12 @@ const Products: FC = () => {
   const { data, isLoading } = useGetProductsQuery();
 
   return (
-    <div>
+    <>
       <SearchProductsForm />
       <ProductsFilters />
-      {isLoading && <p>Loading...</p>}
+      {isLoading && <CircularProgress />}
       {data && <ProductsGrid products={data} />}
-    </div>
+    </>
   );
 };
 
