@@ -5,10 +5,10 @@ import PageTitle from "../../components/page-title";
 
 const ProductsPage: FC = () => {
   return (
-    <div>
+    <>
       <PageTitle>Products</PageTitle>
       <Products />
-    </div>
+    </>
   );
 };
 
