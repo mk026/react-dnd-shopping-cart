@@ -2,7 +2,7 @@ import { FC } from "react";
 import { Grid } from "@mui/material";
 
 import { IProduct } from "../../../types/product";
-import Product from "./product";
+import ProductGridItem from "./product-grid-item";
 
 import classes from "./ProductsGrid.module.css";
 
@@ -14,7 +14,7 @@ const ProductsList: FC<ProductsListProps> = ({ products }) => {
   return (
     <Grid container className={classes.grid}>
       {products.map((product) => (
-        <Product key={product.id} product={product} />
+        <ProductGridItem key={product.id} product={product} />
       ))}
     </Grid>
   );

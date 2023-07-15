@@ -6,13 +6,13 @@ import { IProduct } from "../../../../types/product";
 import { Paths } from "../../../../routes";
 import { useProduct } from "../../../../hooks/useProduct";
 
-import classes from "./Product.module.css";
+import classes from "./ProductGridItem.module.css";
 
-interface ProductProps {
+interface ProductGridItemProps {
   product: IProduct;
 }
 
-const Product: FC<ProductProps> = ({ product }) => {
+const ProductGridItem: FC<ProductGridItemProps> = ({ product }) => {
   const { ref } = useProduct(product);
 
   return (
@@ -37,4 +37,4 @@ const Product: FC<ProductProps> = ({ product }) => {
   );
 };
 
-export default Product;
+export default ProductGridItem;
