@@ -3,10 +3,10 @@ import { IProduct } from "../types/product";
 const fakeText =
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum assumenda nulla quaerat ut mollitia non! Veritatis possimus omnis inventore, nemo recusandae vel nostrum voluptate sed deserunt aliquid, nisi minima error!";
 
-export const getFakeProducts = (): IProduct[] => {
+export const getFakeProducts = (count: number): IProduct[] => {
   const fakeProducts: IProduct[] = [];
   const fakeTextArray = fakeText.split(" ");
-  for (let i = 0; i < 10; i++) {
+  for (let i = 1; i <= count; i++) {
     const fakeProduct: IProduct = {
       id: i,
       description: fakeText.repeat(Math.ceil(Math.random() * 10)),
