@@ -3,7 +3,7 @@ import { IProduct } from "../types/product";
 const fakeText =
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum assumenda nulla quaerat ut mollitia non! Veritatis possimus omnis inventore, nemo recusandae vel nostrum voluptate sed deserunt aliquid, nisi minima error!";
 
-export const getFakeProducts = (count: number): IProduct[] => {
+const generateFakeProducts = (count: number): IProduct[] => {
   const fakeProducts: IProduct[] = [];
   const fakeTextArray = fakeText.split(" ");
   for (let i = 1; i <= count; i++) {
@@ -24,3 +24,5 @@ export const getFakeProducts = (count: number): IProduct[] => {
   }
   return fakeProducts;
 };
+
+export const fakeProducts = generateFakeProducts(10);
