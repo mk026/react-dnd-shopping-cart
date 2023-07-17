@@ -8,7 +8,7 @@ export const useCart = () => {
     accept: PRODUCT_TYPE,
     collect: (monitor) => ({ isOver: monitor.isOver() }),
   }));
-  const { isOpen } = useCartContext();
+  const { isOpen, items } = useCartContext();
 
-  return { isOpen, isOver, ref };
+  return { isOpen, items, isOver, ref };
 };
