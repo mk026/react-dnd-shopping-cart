@@ -1,14 +1,15 @@
 import { FC } from "react";
-import { Card } from "@mui/material";
+import { Card, Stack } from "@mui/material";
 
+import { useCart } from "../../hooks/useCart";
+import CartItem from "./cart-item";
 import CartControls from "./cart-controls";
 import CartTotal from "./cart-total";
-import { useCart } from "../../hooks/useCart";
 
 import classes from "./Cart.module.css";
 
 const Cart: FC = () => {
-  const { isOpen, isOver, ref } = useCart();
+  const { isOpen, items, isOver, ref } = useCart();
 
   if (!isOpen) {
     return null;
@@ -22,7 +23,11 @@ const Cart: FC = () => {
 
   return (
     <Card className={classes.cart} ref={ref}>
-      <p>Cart</p>
+      <Stack>
+        {items.map((item) => (
+          <CartItem item={item} />
+        ))}
+      </Stack>
       <CartTotal total={0} />
       <CartControls />
     </Card>
