@@ -8,6 +8,8 @@ import {
   Typography,
 } from "@mui/material";
 
+import classes from "./Notification.module.css";
+
 interface NotificationProps {
   open: boolean;
   onClose: () => void;
@@ -16,7 +18,7 @@ interface NotificationProps {
 const Notification: FC<NotificationProps> = ({ open, onClose }) => {
   return (
     <Dialog open={open} onClose={onClose}>
-      <DialogTitle>Notification</DialogTitle>
+      <DialogTitle className={classes.title}>Notification</DialogTitle>
       <DialogContent>
         <Typography variant="body2">Success Notification</Typography>
       </DialogContent>
