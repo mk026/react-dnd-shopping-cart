@@ -11,8 +11,7 @@ const ProductPage: FC = () => {
 
   return (
     <>
-      <PageTitle>ProductPage of product with id {id}</PageTitle>
-      <Typography>{data?.title}</Typography>
+      <PageTitle>{data?.title}</PageTitle>
       <Typography>{data?.description}</Typography>
       <Typography>{data?.price}</Typography>
     </>
