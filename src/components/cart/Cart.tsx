@@ -11,11 +11,11 @@ import classes from "./Cart.module.css";
 const Cart: FC = () => {
   const { isOpen, items, isOver, ref } = useCart();
 
-  if (!isOpen) {
-    return null;
-  }
-
   const styles = [classes.cart];
+
+  if (isOpen) {
+    styles.push(classes.open);
+  }
 
   if (isOver) {
     styles.push(classes.hovering);
