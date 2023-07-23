@@ -23,7 +23,7 @@ const Cart: FC = () => {
 
   return (
     <Card className={styles.join(" ")} ref={ref}>
-      <Stack>
+      <Stack className={classes.items}>
         {items.map((item) => (
           <CartItem item={item} />
         ))}

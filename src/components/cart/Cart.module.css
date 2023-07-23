@@ -9,6 +9,12 @@
   transition: all 0.2s linear;
 }
 
+.items {
+  margin-bottom: 0.5rem;
+
+  border-bottom: 2px solid black;
+}
+
 .open {
   opacity: 1;
   pointer-events: all;
