@@ -1,8 +1,8 @@
 import { FC } from "react";
-import { Card, Stack } from "@mui/material";
+import { Card } from "@mui/material";
 
 import { useCart } from "../../hooks/useCart";
-import CartItem from "./cart-item";
+import CartItems from "./cart-items";
 import CartControls from "./cart-controls";
 import CartTotal from "./cart-total";
 
@@ -23,11 +23,7 @@ const Cart: FC = () => {
 
   return (
     <Card className={styles.join(" ")} ref={ref}>
-      <Stack className={classes.items}>
-        {items.map((item) => (
-          <CartItem item={item} />
-        ))}
-      </Stack>
+      <CartItems items={items} />
       <CartTotal total={0} />
       <CartControls />
     </Card>

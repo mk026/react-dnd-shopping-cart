@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Button, Card, Typography } from "@mui/material";
 
-import { ICartItem } from "../../../types/cart";
+import { ICartItem } from "../../../../types/cart";
 
 import classes from "./CartItem.module.css";
 
