@@ -1,10 +1,10 @@
 .container {
   margin: 0 auto 2rem;
   padding: 1rem;
-  width: 600px;
+  width: 700px;
 }
 
 .info {
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-align: center;
 }
