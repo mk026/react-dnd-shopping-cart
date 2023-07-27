@@ -12,10 +12,12 @@ interface CartItemProps {
 const CartItem: FC<CartItemProps> = ({ item }) => {
   return (
     <Card className={classes.item}>
-      <Typography>{item.title}</Typography>
-      <Typography>{item.description}</Typography>
-      <Typography>{item.price}</Typography>
-      <Typography>{item.amount}</Typography>
+      <Typography className={classes.title}>{item.title}</Typography>
+      <Typography className={classes.description}>
+        {item.description}
+      </Typography>
+      <Typography className={classes.price}>{item.price}</Typography>
+      <Typography className={classes.amount}>{item.amount}</Typography>
       <Button>Remove</Button>
     </Card>
   );
